@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 // Import and use the 'submit' route
-const submitRoute = require('../functions/submit'); // Adjust the path as needed
+const submitRoute = require('./functions/submit'); // Adjust the path as needed
 app.use('/submit', submitRoute); // Use the correct path for Netlify functions
 
 // Removed the conditional for !process.env.NETLIFY as it's not needed
