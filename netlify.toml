@@ -1,2 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"  # Replace with the directory where your static assets are generated
+
 [dev]
-    publish = "dist"
+  command = "npm start"
+
+[context.production.environment]
+  NODE_ENV = "production"
