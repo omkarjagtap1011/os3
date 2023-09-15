@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         const isUnique = await checkUniqueOS(auth, osLower);
 
         if (!isUnique) {
-            res.json({ error: 'Operating system is not unique.' });
+            res.json({ error: 'Operating system already taken.' });
             return;
         }
 
